@@ -17,16 +17,16 @@ However, if the dependencies are not installed correctly, please install them by
 ```
 If you want to run the DWLS, SpatialDWLS, Stereoscope and cell2location for the ensemble learning, we advise that the user should install [anaconda]( https://www.anaconda.com/) and run the upper command on the terminal (ubuntu)/CMD (windows) to install the python dependencies for running the methods. In our application, due to the computer with RTX3080 GPU, we install the [pytorch with cudatookit]( https://pytorch.org/). If you don’t want to use the *.yml provided. You can install the python dependencies by the following code.
 ```buildoutcfg
- pip install scvi-tools
- pip install cell2location
- pip install scanpy
- pip install anadata
- pip install igraph
- pip install networkx
- pip install leidenalg
- pip install community
- pip install  smfishHmrf
- pip install scikit-learn
+pip install scvi-tools
+pip install cell2location
+pip install scanpy
+pip install anadata
+pip install igraph
+pip install networkx
+pip install leidenalg
+pip install community
+pip install  smfishHmrf
+pip install scikit-learn
 # install pytorch with CPU or GPU version
 ```
 After install the python dependencies, the user need to get the path of environment of conda and set the path to the python_env variable in the function of EnDecon_individual_methods in our package. The path is similar to "\~/.conda/envs/EnDecon\_env/bin/python" on the ubuntu and "\~/anaconda3/envs/EnDecon\_env/python.ext" on Windows.
@@ -34,9 +34,9 @@ After install the python dependencies, the user need to get the path of environm
 SCDC
 ```buildoutcfg
 install.packages("remotes")
-  remotes::install_github("renozao/xbioc")
+remotes::install_github("renozao/xbioc")
 install.package("devtools")
-  devtools::install_github("meichendong/SCDC")
+devtools::install_github("meichendong/SCDC")
 ```
 RCTD
 ```buildoutcfg
