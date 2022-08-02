@@ -26,7 +26,7 @@ However, if the dependencies are not installed correctly, please install them by
 yourself by the following instruction. We check all the codes and
 examples in the package on the computer with the system of ubuntu 18.04,
 64 GB RAM, i7-10700 CPU, RTX 3080 GPU. We also test the R package on the
-linux sever with A100 GPU.
+linux sever with A100 GPU. We strongly advise that the user performs the EnDecon on the linux system.
 
 ## Install individual dependencies
 
