@@ -1,7 +1,7 @@
 # EnDecon
 R package applies ensemble learning for the deconvolution of spatial transcriptomic data. 
 
-The EnDecon package has the main following R-package dependencies: SCDC, spacexr, MuSiC, DeconRNASeq, DWLS, Seurat, SPOTlight, Giotto, spatstat.geom, CARD, parallel, doParallel, foreach, reticulate and several python packages: scvi-tools, cell2location, scanpy, anndata. For the R package dependencies, you can load on most of R dependencies packages on your R when install the EnDecon R package by run the code:
+The EnDecon package has the main following R-package dependencies: SCDC, spacexr, MuSiC, DeconRNASeq, DWLS, Seurat, SPOTlight, Giotto, spatstat.geom, CARD, parallel, doParallel, foreach, reticulate and several python packages: scvi-tools, cell2location, scanpy, anndata. For the R-package dependencies, you can load on most of R dependencies packages on your R when install the EnDecon R package by run the code:
  ``` buildoutcfg
  devtools::install_github("Zhangxf-ccnu/EnDecon")
 ```
@@ -15,29 +15,28 @@ However, if the dependencies are not installed correctly, please install them by
  ### construct EnDecon python environment with pytorch CPU version
  conda env create -f requirment_EnDecon_CPU.yml
 ```
-If you want to run the SpatialDWLS, Stereoscope and cell2location for the ensemble learning, we advise that the user should install [anaconda]( https://www.anaconda.com/) and run the upper command on the terminal (ubuntu)/CMD (windows) to install the python dependencies for running the methods. In our application, due to the computer with RTX3080 GPU, we install the [pytorch with cudatookit]( https://pytorch.org/). If you don’t want to use the *.yml provided. You can install the python dependencies by the following code.
+If you want to run the DWLS, SpatialDWLS, Stereoscope and cell2location for the ensemble learning, we advise that the user should install [anaconda]( https://www.anaconda.com/) and run the upper command on the terminal (ubuntu)/CMD (windows) to install the python dependencies for running the methods. In our application, due to the computer with RTX3080 GPU, we install the [pytorch with cudatookit]( https://pytorch.org/). If you don’t want to use the *.yml provided. You can install the python dependencies by the following code.
 ```buildoutcfg
-pip install scvi-tools
-pip install cell2location
-pip install scanpy
-pip install anadata
-pip install igraph
-pip install networkx
-pip install leidenalg
-pip install community
-pip install  smfishHmrf
-pip install scikit-learn
+ pip install scvi-tools
+ pip install cell2location
+ pip install scanpy
+ pip install anadata
+ pip install igraph
+ pip install networkx
+ pip install leidenalg
+ pip install community
+ pip install  smfishHmrf
+ pip install scikit-learn
 # install pytorch with CPU or GPU version
 ```
 After install the python dependencies, the user need to get the path of environment of conda and set the path to the python_env variable in the function of EnDecon_individual_methods in our package. The path is similar to "\~/.conda/envs/EnDecon\_env/bin/python" on the ubuntu and "\~/anaconda3/envs/EnDecon\_env/python.ext" on Windows.
 * **Install R dependencies**
-
 SCDC
 ```buildoutcfg
 install.packages("remotes")
-remotes::install_github("renozao/xbioc")
+  remotes::install_github("renozao/xbioc")
 install.package("devtools")
-devtools::install_github("meichendong/SCDC")
+  devtools::install_github("meichendong/SCDC")
 ```
 RCTD
 ```buildoutcfg
@@ -74,17 +73,17 @@ spatstat.geom
 install.packages("spatstat.geom")
 ```
 CARD
-```buildoutcfg
+'''buildoutcfg
 devtools::install_github('YingMa0107/CARD')
-```
+'''
 parallel and doParallel
-```buildoutcfg
+'''buildoutcfg
 install.packages("parallel")
 install.packages("doParallel")
-```
+'''
 reticulate
 ```buildoutcfg
-install.packages('reticulate')
+Install.packages('reticulate')
 ```
 ## Run the example
 ```buildoutcfg
@@ -102,6 +101,6 @@ Results.Deconv <- EnDecon_individual_methods(MVC.reference, MVC.reference.cell.l
                   SpatialDWLS.is_select_DEGs = FALSE)
 ensemble.results <- solve_ensemble(Results.Deconv)
 ```
-Please do not hesitate to contact Prof. Zhang at zhangxf@ccnu.edu.cn to seek any clarifications regarding any content or operation of the archive.
+Please do not hesitate to contact Prof. Zhang at zhangxf@mails.ccnu.edu.cn to seek any clarifications regarding any content or operation of the archive.
 
  
