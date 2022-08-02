@@ -1,7 +1,7 @@
 # EnDecon
 R package applies ensemble learning for the deconvolution of spatial transcriptomic data. 
 
-The EnDecon package has the main following R-package dependencies: SCDC, spacexr, MuSiC, DeconRNASeq, DWLS, Seurat, SPOTlight, Giotto, spatstat.geom, CARD, parallel, doParallel, foreach, reticulate and several python packages: scvi-tools, cell2location, scanpy, anndata. For the R-package dependencies, you can load on most of R dependencies packages on your R when install the EnDecon R package by run the code:
+The EnDecon package has the main following R-package dependencies: SCDC, spacexr, MuSiC, DeconRNASeq, DWLS, Seurat, SPOTlight, Giotto, spatstat.geom, CARD, parallel, doParallel, foreach, reticulate and several python packages: scvi-tools, cell2location, scanpy, anndata. For the R package dependencies, you can load on most of R dependencies packages on your R when install the EnDecon R package by run the code:
  ``` buildoutcfg
  devtools::install_github("Zhangxf-ccnu/EnDecon")
 ```
