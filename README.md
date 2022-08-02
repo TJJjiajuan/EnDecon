@@ -93,7 +93,7 @@ BiocManager::install("DeconRNASeq")
 ```
 DWLS
 ``` buildoutcfg
-remotes::install_github("sistia01/DWLS")
+install.packages("DWLS")
 ```
 Seurat
 ``` buildoutcfg
@@ -101,7 +101,7 @@ install.packages("Seurat")
 ```
 SPOTlight (Version 0.1.7)
 ``` buildoutcfg
-devtools::install_github("MarcElosua/SPOTlight/tree/spotlight-0.1.7")
+devtools::install_github("https://github.com/MarcElosua/SPOTlight/tree/spotlight-0.1.7")
 ```
 Giotto
 ``` buildoutcfg
@@ -122,7 +122,7 @@ install.packages("doParallel")
 ```  
 reticulate
 ``` buildoutcfg
-Install.packages('reticulate')
+install.packages('reticulate')
 ```
 
 ## Run the example
