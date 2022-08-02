@@ -1,11 +1,4 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # EnDecon
-
 EnDecon integrates multiple base deconvolution results using a weighted
 optimization model to generate a more accurate result. EnDecon mainly
 includes two steps: (1) running each base deconvolution method
