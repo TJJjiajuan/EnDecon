@@ -1,5 +1,6 @@
 # EnDecon
-EnDecon integrates multiple base deconvolution results using a weighted
+EnDecon applies ensemble learning for the deconvolution of spatial
+transcriptomic data. EnDecon integrates multiple base deconvolution results using a weighted
 optimization model to generate a more accurate result. EnDecon mainly
 includes two steps: (1) running each base deconvolution method
 individually to obtain the base cell type deconvolution results, and (2)
@@ -7,9 +8,7 @@ integrating these base deconvolution results into a better deconvolution
 result using a new proposed ensemble strategy. EnDecon obtains the
 ensemble result by alternatively updating the ensemble result as a
 weighted median of the base deconvolution results and the weights of
-base results based on their distance from the ensemble result. R package
-applies ensemble learning for the deconvolution of spatial
-transcriptomic data.
+base results based on their distance from the ensemble result. 
 
 ![alt
 text](https://github.com/keyalone/EnDecon/blob/main/docs/Figure1.png?raw=true)
@@ -40,7 +39,7 @@ conda env create -f requirments_GPU.yml
 conda env create -f requirment_EnDecon_CPU.yml
 ```
 
-If you want to run the DWLS, SpatialDWLS, Stereoscope and cell2location
+If you want to run the SpatialDWLS, Stereoscope and cell2location
 for the ensemble learning, we advise that the user should install
 [anaconda](https://www.anaconda.com/) and run the upper command on the
 terminal (ubuntu)/CMD (windows) to install the python dependencies for
