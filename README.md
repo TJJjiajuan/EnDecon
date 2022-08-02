@@ -15,7 +15,7 @@ However, if the dependencies are not installed correctly, please install them by
  ### construct EnDecon python environment with pytorch CPU version
  conda env create -f requirment_EnDecon_CPU.yml
 ```
-If you want to run the DWLS, SpatialDWLS, Stereoscope and cell2location for the ensemble learning, we advise that the user should install [anaconda]( https://www.anaconda.com/) and run the upper command on the terminal (ubuntu)/CMD (windows) to install the python dependencies for running the methods. In our application, due to the computer with RTX3080 GPU, we install the [pytorch with cudatookit]( https://pytorch.org/). If you don’t want to use the *.yml provided. You can install the python dependencies by the following code.
+If you want to run the SpatialDWLS, Stereoscope and cell2location for the ensemble learning, we advise that the user should install [anaconda]( https://www.anaconda.com/) and run the upper command on the terminal (ubuntu)/CMD (windows) to install the python dependencies for running the methods. In our application, due to the computer with RTX3080 GPU, we install the [pytorch with cudatookit]( https://pytorch.org/). If you don’t want to use the *.yml provided. You can install the python dependencies by the following code.
 ```buildoutcfg
 pip install scvi-tools
 pip install cell2location
@@ -101,6 +101,6 @@ Results.Deconv <- EnDecon_individual_methods(MVC.reference, MVC.reference.cell.l
                   SpatialDWLS.is_select_DEGs = FALSE)
 ensemble.results <- solve_ensemble(Results.Deconv)
 ```
-Please do not hesitate to contact Prof. Zhang at zhangxf@mails.ccnu.edu.cn to seek any clarifications regarding any content or operation of the archive.
+Please do not hesitate to contact Prof. Zhang at zhangxf@ccnu.edu.cn to seek any clarifications regarding any content or operation of the archive.
 
  
