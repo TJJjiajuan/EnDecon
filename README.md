@@ -20,6 +20,16 @@ several python packages: scvi-tools, cell2location, scanpy, anndata. For
 the R-package dependencies, you can load on most of R dependencies
 packages on your R when install the EnDecon R package by run the code:
 ```buildoutcfg  
+### dependency of SCDC
+install.packages("remotes")
+  remotes::install_github("renozao/xbioc")
+### dependency of CARD
+install.packages("devtools")
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("SingleCellExperiment")
+### special version of SPOTlight
+devtools::install_github("https://github.com/MarcElosua/SPOTlight/tree/spotlight-0.1.7")
 devtools::install_github("Zhangxf-ccnu/EnDecon")
 ```
 However, if the dependencies are not installed correctly, please install them by
@@ -52,7 +62,7 @@ provided. You can install the python dependencies by the following code.
  pip install scvi-tools
  pip install cell2location
  pip install scanpy
- pip install anadata
+ pip install anndata
  pip install igraph
  pip install networkx
  pip install leidenalg
@@ -133,10 +143,10 @@ data("MVC.reference.cell.label")
 data("MVC.ST")
 data("MVC.ST.coor")
 ##### path on ubuntu platform on our computer
-python_env <- "~/.conda/envs/EnDecon_GPU/bin/python"
+python_env <- "~/.conda/envs/EnDecon_CPU/bin/python"
 ##### we use all the genes for the deconvolutioin
 Results.Deconv <- EnDecon_individual_methods(MVC.reference, MVC.reference.cell.label,
-                  MVC.ST, MVC.ST.coor,  python_env = python_env, use_gpu = TRUE,
+                  MVC.ST, MVC.ST.coor,  python_env = python_env, use_gpu = FALSE,
                   RCTD.CELL_MIN_INSTANCE = 10, gene_det_in_min_cells_per = 0,
                   expression_threshold = 0, nUMI = 1, DWLS.is_select_DEGs = FALSE,
                   SpatialDWLS.is_select_DEGs = FALSE)
