@@ -37,9 +37,10 @@ Encoding: UTF-8
 LazyData: true
 biocViews:
 Remotes:
-      renozao/xbioc,
+      git::git@github.com:renozao/xbioc.git,
       meichendong/SCDC,
       dmcable/spacexr,
       xuranw/MuSiC,
       RubD/Giotto,
-      YingMa0107/CARD
+      YingMa0107/CARD,
+      bioc::1.18.0/SingleCellExperiment
