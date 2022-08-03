@@ -38,3 +38,8 @@ LazyData: true
 biocViews:
 Remotes:
       renozao/xbioc
+      meichendong/SCDC
+      dmcable/spacexr
+      xuranw/MuSiC
+      RubD/Giotto
+      YingMa0107/CARD
