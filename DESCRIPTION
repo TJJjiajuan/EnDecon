@@ -37,7 +37,7 @@ Encoding: UTF-8
 LazyData: true
 biocViews:
 Remotes:
-      git::git@github.com:renozao/xbioc.git,
+      renozao/xbioc,
       meichendong/SCDC,
       dmcable/spacexr,
       xuranw/MuSiC,
